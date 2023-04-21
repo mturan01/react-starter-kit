@@ -4,6 +4,8 @@ import Test from "./Test";
 import styles from "./App.module.css";
 import { Title } from "./Components";
 import Bootsatrap from "./Bootsatrap";
+import "./tailwind.css";
+import Tailwind from "./Tailwind";
 
 function App() {
   useEffect(()=>{
@@ -24,6 +26,7 @@ function App() {
  </>
  )}
   <Bootsatrap/>
+  <Tailwind/>
     </div>
   );
 }
