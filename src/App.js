@@ -3,6 +3,8 @@ import logo from "./logo.svg"
 import Test from "./Test";
 import styles from "./App.module.css";
 import { Title } from "./Components";
+import Bootsatrap from "./Bootsatrap";
+
 function App() {
   useEffect(()=>{
     if(process.env.NODE_ENV=='production'){
@@ -21,6 +23,7 @@ function App() {
  <img src={logo} alt="" />
  </>
  )}
+  <Bootsatrap/>
     </div>
   );
 }
