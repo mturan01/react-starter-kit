@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import logo from "./logo.svg"
-
+import Test from "./Test";
+import styles from "./App.module.css";
+import { Title } from "./Components";
 function App() {
   useEffect(()=>{
     if(process.env.NODE_ENV=='production'){
@@ -8,9 +10,11 @@ function App() {
     }
   })
   return (
-    <div className="App">
- <h3>{process.env.NODE_ENV}</h3>
+    <div className={styles.App}>
+ <Title>{process.env.NODE_ENV}</Title>
+ <Title theme="dark">{process.env.NODE_ENV}</Title>
  <p>{process.env.REACT_APP_API_URL}</p>
+ <Test/>
  {process.env.NODE_ENV=='production' &&(
   <>
  <img src="logo192.png" alt="" />
