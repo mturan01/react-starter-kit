@@ -5,7 +5,8 @@ import styles from "./App.module.css";
 import { Title } from "./Components";
 import Bootsatrap from "./Bootsatrap";
 import "./tailwind.css";
-import Tailwind from "./Tailwind";
+//import Tailwind from "./Tailwind";
+import "./style.scss"
 
 function App() {
   useEffect(()=>{
@@ -17,7 +18,9 @@ function App() {
     <div className={styles.App}>
  <Title>{process.env.NODE_ENV}</Title>
  <Title theme="dark">{process.env.NODE_ENV}</Title>
- <p>{process.env.REACT_APP_API_URL}</p>
+ <p className="env">{process.env.REACT_APP_API_URL}
+ <span>Test</span>
+ </p>
  <Test/>
  {process.env.NODE_ENV=='production' &&(
   <>
@@ -26,7 +29,7 @@ function App() {
  </>
  )}
   <Bootsatrap/>
-  <Tailwind/>
+  {/* <Tailwind/> */}
     </div>
   );
 }
